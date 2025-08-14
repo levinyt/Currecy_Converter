@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  color: #f2f2f2;
+  font-family: Poppins, sans-serif;
+  /* Dominant black animated gradient background */
+  background: linear-gradient(120deg, #0a0a0a 0%, #111 40%, #1a7f3c 60%, #444 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease-in-out;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+/* Highlight main area with blur and shadow */
+.card {
+  background: rgba(30, 30, 40, 0.4); /* More transparent for blur effect */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 2rem auto;
+  backdrop-filter: blur(16px); /* Increased blur for stronger effect */
+  border: 1px solid rgba(255,255,255,0.25); /* Slightly more visible border */
+  transition: background 0.3s;
+}
+
+h1{
+  margin: 0;
+  margin-bottom: 2rem;
+
+}
+.input {
+  border-radius: .3rem;
+  padding: .25rem;
+  width: 7rem;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  transition: background 0.2s, border 0.2s;
+}
+
+.input:focus,
+.input:hover {
+  background: #222;
+  border: 1.5px solid #1a7f3c;
+  outline: none;
+}
+select {
+  margin-left: .5rem;
+  border-radius: .3rem;
+  padding: .25rem;
+  width: 7rem;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  transition: background 0.2s, border 0.2s;
+}
+
+select:focus,
+select:hover {
+  background: #222;
+  border: 1.5px solid #1a7f3c;
+  outline: none;
+}
+.equals{
+  font-weight: bold;
+  font-size: 2rem;
+  margin:0;
+  padding: 0 .5rem;
+
+
+}
