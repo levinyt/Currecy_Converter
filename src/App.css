@@ -11,22 +11,29 @@ body {
   /* Dominant black animated gradient background */
   background: linear-gradient(120deg, #0a0a0a 0%, #111 40%, #1a7f3c 60%, #444 100%);
   background-size: 200% 200%;
-  animation: gradientMove 3s ease-in-out;
+  animation: gradientMove 20s linear infinite;
 }
+
+  body {
+    box-sizing: border-box;
+  }
 
 @keyframes gradientMove {
   0% {
     background-position: 100% 0;
   }
-  100% {
+  50% {
     background-position: 0 100%;
+  }
+  100% {
+    background-position: 100% 0;
   }
 }
 
 /* Highlight main area with blur and shadow */
 .card {
   background: rgba(30, 30, 40, 0.4); /* More transparent for blur effect */
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(120, 83, 223, 0.568);
   border-radius: 1.5rem;
   padding: 2.5rem 2rem;
   max-width: 400px;
@@ -36,6 +43,53 @@ body {
   border: 1px solid rgba(255,255,255,0.25); /* Slightly more visible border */
   transition: background 0.3s;
 }
+
+  @media (max-width: 600px) {
+    .card {
+      padding: 1.2rem 0.5rem;
+      max-width: 98vw;
+      border-radius: 1rem;
+      margin: 1rem auto;
+    }
+    h1 {
+      font-size: 1.3rem;
+      margin-bottom: 1.2rem;
+    }
+    .input, select {
+      width: 5.5rem;
+      font-size: 1rem;
+      padding: 0.18rem;
+    }
+    .equals {
+      font-size: 1.3rem;
+      padding: 0 0.2rem;
+    }
+    body {
+      animation: gradientMove 8s  infinite;
+    }
+  }
+
+  @media (min-width: 601px) {
+    .card {
+      padding: 2.5rem 2rem;
+      max-width: 400px;
+      border-radius: 1.5rem;
+      margin: 2rem auto;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .input, select {
+      width: 7rem;
+      font-size: 1.1rem;
+      padding: 0.25rem;
+    }
+    .equals {
+      font-size: 2rem;
+      padding: 0 0.5rem;
+    }
+  }
 
 h1{
   margin: 0;
